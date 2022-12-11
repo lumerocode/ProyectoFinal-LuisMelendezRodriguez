@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="./favicon.ico">
+    <!-- Fontawesome Link -->
+    <script src="https://kit.fontawesome.com/152ce6a8e1.js" crossorigin="anonymous"></script>
     <!-- Boostratp -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Simulando carrito</title>
+    <title>CART SIMULATION</title>
     
 </head>
 <body>
 
-    <main class="container mt-5">
+    <main class="container mt-4">
         <div class="row text-center">
             <article class="col-sm-4 mb-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Laptop 💻</h5>
                         <p class="lead">$300</p>
-                        <button class="btn btn-primary btn-sm" data-product="laptop" data-price="300">Add</button>
+                        <button class="btn btn-primary btn-sm btn-add" data-product="laptop" data-price="300" data-img="./src/laptop.jpg">Add</button>
                     </div>
                 </div>
             </article>
@@ -27,7 +31,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Mouse 🖱</h5>
                         <p class="lead">$100</p>
-                        <button class="btn btn-primary btn-sm" data-product="mouse" data-price="100">Add</button>
+                        <button class="btn btn-primary btn-sm btn-add" data-product="mouse" data-price="100" data-img="./src/mouse.jpg">Add</button>
                     </div>
                 </div>
             </article>
@@ -36,7 +40,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Keyboard ⌨</h5>
                         <p class="lead">$200</p>
-                        <button class="btn btn-primary btn-sm" data-product="keyboard" data-price="200">Add</button>
+                        <button class="btn btn-primary btn-sm btn-add" data-product="keyboard" data-price="200" data-img="./src/keyboard.jpg">Add</button>
                     </div>
                 </div>
             </article>
@@ -44,24 +48,41 @@
     </main>
 
     <section class="container mt-3">
-        <ul class="list-group" id="carrito">
+        <ul class="row text-center ps-0" id="cart">
             <template id="template">
-                <li class="list-group-item text-uppercase bg-secondary text-white">
-                    <span class="badge bg-primary rounded-pill align-middle">14</span>
-                    <span class="lead align-middle">A list item</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <div>
-                        <p class="lead mb-0">Price: $<span>200</span></p>
+                <div class="col-sm-4 mb-4">
+                    <li class="list-group-item text-uppercase bg-secondary text-white">
+                        <span class="lead align-middle">Product name</span>
+                    </li>
+                    <div class="img-product">
+                        <img class="img-single-product w-100" src="./src/mouse.jpg" alt="Image">
                     </div>
-                    <div>
-                        <button class="btn btn-sm btn-success">Add</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                    </div>
-                </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                            <!-- <button class="btn btn-sm bg-info btn-remove">0</button> -->
+                            <p class="lead mb-0">Total: $<span>200</span></p>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-danger">-</button>
+                            <span class="badge text-dark rounded-pill align-middle">10</span>
+                            <button class="btn btn-sm btn-success">+</button>
+                        </div>
+                    </li>
+                </div>
             </template>
         </ul>
     </section>
+
+    <footer id="footer" class="container mt-3">
+        <template id="templateFooter">
+            <div class="card">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <p class="lead mb-0">TOTAL: $<span>1500</span></p>
+                    <button class="btn btn-outline-primary" onclick="finalizarCompra()">Finalizar Compra</button>
+                </div>
+            </div>
+        </template>
+    </footer>
     
     <script src="Js/javascript.js"></script>
 </body>
