@@ -1,0 +1,603 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+// Clients
+.clients {
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+    padding: 50px 0;
+
+    &__text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        &:hover {
+
+            .client_img {
+                filter: blur(3px);
+                opacity: 0.5;
+                transform: scale(.98);
+                box-shadow: none;
+
+                &:hover {
+                    transform: scale(1);
+                    filter: blur(0px);
+                    opacity: 1;
+                }
+                
+            }
+
+        }
+
+    }
+
+}
+
+// Crafted for
+.craf {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+
+    &__left {
+        
+        img {
+            width: 100%;
+            border-radius: 1.5rem;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__desc {
+            margin: 1rem 0 2rem 0;
+        }
+
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+
+            .craf-list {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+
+                &__img {
+                    width: 64px;
+                }
+            }
+
+        }
+    }
+}
+
+// Plans
+.plans {
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+    padding: 50px 0;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__desc {
+        text-align: center;
+        margin: 1rem 0 2rem 0;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+
+        .buttons__container {
+            background: #F9FAFB;
+            border: 2px solid map-get($color-main, primary);
+            border-radius: 10px;
+            padding: 10px;
+
+            .button-primary:hover {
+                background-color: map-get($color-main, primary);
+                color: $color-white;
+                border: 2px solid map-get($color-main, primary);
+                cursor: pointer;
+            }
+
+            .button-secondary {
+                background-color: transparent;
+                padding: 0 38px;
+                border: 2px solid transparent;
+
+                &:hover {
+                    background-color: map-get($color-main, primary);
+                    color: #fff;
+                    padding: 16px 38px;
+                    border-radius: 10px;
+                    border: 2px solid map-get($color-main, primary);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__cards {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+
+        .plan-card {
+            background: #F9FAFB;
+            border: 2px solid map-get($color-main, primary);
+            border-radius: 20px;    
+            padding: 40px;
+            width: 374px;
+            height: 374px;
+            display: grid;
+            justify-items: center;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+
+                .button-primary {
+                    background: #F9FAFB;
+                    color: map-get($color-main, primary);
+                }
+            }
+
+            a {
+                display: flex;
+            }
+
+            &__title {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+
+            &__desc {
+                text-align: center;
+            }
+
+            &__price {
+                display: flex;
+                justify-content: center;
+                font-weight: 600;
+
+                p {
+                    font-size: 2rem;
+                }
+            }
+
+            &__save {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                width: 60%;
+                color: $color-black;
+                margin-bottom: 2rem;
+            }
+
+            .button-primary {
+                padding: 4px 40px;
+            }
+        }
+
+    }
+}
+
+// Benefit
+.benefit {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    padding: 50px 0;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .benefit__title {
+            margin-bottom: 1rem;
+        }
+
+        .benefit-items {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.5rem;
+
+            i {
+                background-color: map-get($color-main, primary);
+                color: $color-white;
+                font-size: 0.8rem;
+                padding: 4px;
+                border-radius: 50%;
+                margin-right: 0.8rem;
+            }
+
+        }
+    }
+
+    &__right {
+
+        img {
+            width: 100%;
+            border-radius: 1.5rem;
+        }
+    }
+
+}
+
+// Blog
+.blog {
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+    padding: 50px 0;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__desc {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    &__cards {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 3.5fr 2fr;
+        column-gap: 2rem;
+
+        .blog-cards__items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+
+            .blog-card {
+
+                &__img {
+                    width: 100%;
+                    border-radius: 1.5rem;
+                }
+                
+                &__date {
+                    margin: 1rem 0;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                &__title {
+                    margin-bottom: 1rem;
+                }
+
+                &__desc {
+                    text-align: justify;
+                }
+            }
+
+        }
+
+        .blog__targets {
+            display: grid;
+            padding: 2rem;
+            border: 1px solid #6a6a6a42;
+            border-radius: 0.5rem;
+            row-gap: 2rem;
+
+            .blog__target {
+                display: flex;
+                align-items: center;
+                column-gap: 2rem;
+
+                .blog-target__img {
+                    width: 100px;
+                    border-radius: 0.6rem;
+                }
+
+                .blog-target__content {
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+
+                    .blog-target__date {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    
+                }
+
+            }
+
+            
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+}
+
+// Tunned
+.tunned {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+
+    &__left {
+        img {
+            width: 100%;
+            border-radius: 1.5rem;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .tunned__send {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 2rem;
+            column-gap: 0.2rem;
+
+            .tunned-send__left {
+                display: flex;
+                flex-direction: row;
+                column-gap: 0.2rem;
+                align-items: center;
+
+                input {
+                    background: $color-white;
+                    border: 1px solid $color-black;
+                    height: 3rem;
+                    padding: 20px 21px;
+                    font-size: 1rem;
+                    border-radius: 0.5rem;
+    
+                    &:focus {
+                        border: 2px solid map-get($color-main, primary);
+                        outline: 0 none;
+                    }
+
+                }
+            }
+
+            
+        }
+    }
+}
+
+// Testimonial
+.test {
+    border-top: 1px solid $color-border;
+    padding-top: 50px;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__desc {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+
+        .test-card {
+            background: #F9FAFB;
+            border: 2px solid map-get($color-main, primary);
+            border-radius: 20px;    
+            padding: 40px;
+            width: 374px;
+            height: 584px;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+
+            &__img {
+                border-radius: 50%;
+                width: 60%;
+            }
+
+            &__comment {
+                text-align: justify;
+                border-bottom: 1px solid $color-border;
+                padding-bottom: 1.3rem;
+            }
+
+        }
+    }
+}
+
+/* ===================== MOBILE ===================== */
+@media screen and (max-width: 768px) {
+
+    //Clients
+    .clients {
+
+        &__container {
+            @include flex-column;
+            row-gap: 2rem;
+            align-items: center;
+            
+            a {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 75%;
+                }
+
+            }
+            
+        }
+
+    }
+
+    //Crafted for
+    .craf { 
+        @include flex-column;
+
+        &__right {
+            margin-top: 1.5rem;
+
+            &__title {
+                text-align: center;
+            }
+
+            &__desc {
+                text-align: justify;
+            }
+
+            &__container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    //Plans 
+    .plans {
+
+        &__buttons {
+
+            .buttons__container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                column-gap: 1rem;
+                width: 100%;
+
+                .button-secondary {
+                    padding: 16px 32px;
+                }
+            }
+        }
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            row-gap: $grid-column-gap;
+
+            .plan-card {
+                width: 100%;
+            }
+        }
+    }
+
+    //Benefit 
+    .benefit {
+        display: flex;
+        flex-direction: column-reverse;
+
+        &__left {
+            margin-top: 1.5rem;
+            
+            .benefit__title {
+                text-align: center;
+            }
+        }
+    }
+
+    //Blog
+    .blog {
+
+        &__cards{
+            @include flex-column;
+            row-gap: 2rem;
+
+            .blog-cards__items {
+                display: flex;
+                flex-direction: column;
+                row-gap: 2rem;
+            }
+
+            .blog__targets {
+
+                .blog__target {
+    
+                    .blog-target__content {
+    
+                        .blog-target__date {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                        }
+                        
+                    }
+    
+                }
+            }
+        }
+    }
+
+    //Tunned 
+    .tunned {
+        @include flex-column;
+
+        &__right {
+
+            .tunned__send {
+                flex-direction: column;
+                align-items: center;
+                row-gap: 1rem;
+
+                .tunned-send__left {
+                    width: 100%;
+                    column-gap: 0.5rem;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                .tunned-send__right {
+                    width: 100%;
+
+                    .button-primary {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    //Testimonial
+
+    .test {
+
+        &__cards {
+            @include flex-column;
+            row-gap: 2rem;
+
+            .test-card {
+                width: 100%;
+            }
+        }
+    }
+
+}

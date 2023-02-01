@@ -1,0 +1,95 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.progress {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    height: 100vh;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 5rem;
+
+        &__buttons {
+            display: flex;
+            column-gap: 3rem;
+
+            .button-secondary {
+        
+                i {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        &__title {
+            text-align: center;
+            font-size: 10rem;
+        }
+
+        &__desc {
+            text-align: center;
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        &__second-desc {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+
+        &__img {
+            width: 100%;
+            border-radius: 1.5rem;
+        }
+    }
+
+}
+
+/* ===================== MOBILE ===================== */
+@media screen and (max-width: 768px) {
+
+    .progress {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        margin-top: 5rem;
+        padding-bottom: 50px;
+
+        &__left {
+            padding-right: 0;
+            text-align: center;
+            row-gap: 1rem;
+
+            &__title {
+                font-size: 5rem;
+            }
+
+            &__desc {
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            &__buttons {
+                @include flex-column;
+                row-gap: 1rem;
+    
+                .button-secondary {
+            
+                    i {
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+}

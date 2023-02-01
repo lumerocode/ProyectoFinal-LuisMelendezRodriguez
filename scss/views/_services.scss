@@ -1,0 +1,189 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.services {
+
+    &__title {
+        text-align: center;
+    }
+
+    &__desc {
+        text-align: center;
+        margin: 1rem 0 2rem 0;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+
+        .buttons__container {
+            background: #F9FAFB;
+            border: 2px solid map-get($color-main, primary);
+            border-radius: 10px;
+            padding: 10px;
+
+            .button-primary:hover {
+                background-color: map-get($color-main, primary);
+                color: $color-white;
+                border: 2px solid map-get($color-main, primary);
+                cursor: pointer;
+            }
+
+            .button-secondary {
+                background-color: transparent;
+                padding: 0 38px;
+                border: 2px solid transparent;
+
+                &:hover {
+                    background-color: map-get($color-main, primary);
+                    color: #fff;
+                    padding: 16px 38px;
+                    border-radius: 10px;
+                    border: 2px solid map-get($color-main, primary);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__cards {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+
+        .service-card {
+            background: #F9FAFB;
+            border: 2px solid map-get($color-main, primary);
+            border-radius: 20px;    
+            padding: 40px;
+            width: 374px;
+            height: 584px;
+            display: grid;
+            justify-items: center;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+
+            &__title {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+
+            &__desc {
+                text-align: center;
+            }
+
+            &__price {
+                display: flex;
+                justify-content: center;
+                font-weight: 600;
+
+                p {
+                    font-size: 2rem;
+                }
+            }
+
+            &__save {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: map-get($color-main, gradient);
+                border-radius: 10px;
+                width: 60%;
+                color: $color-white;
+                margin-bottom: 1rem;
+            }
+
+            &__items {
+                background: $color-white;
+                border-radius: 10px;
+                display: grid;
+                align-items: center;
+                padding: 26px;
+                width: 100%;
+
+                .card-items {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.5rem;
+
+                    i {
+                        background-color: map-get($color-main, primary);
+                        color: $color-white;
+                        font-size: 0.8rem;
+                        padding: 4px;
+                        border-radius: 50%;
+                        margin-right: 0.8rem;
+                    }
+                }
+
+                .button-primary {
+                    margin-top: .5rem;
+                    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
+                    border-radius: 20px;
+                    background-color: transparent;
+                    color: map-get($color-main, primary);
+                    width: 100%;
+
+                    &:hover {
+                        background-color: map-get($color-main, primary);
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+
+        .service-card--selected {
+            background-color: map-get($color-main, primary);
+            display: grid;
+            justify-items: center;
+
+            .service-card__title, .service-card__desc, .service-card__price {
+                color: $color-white;
+            }
+
+            .button-primary{
+                background-color: map-get($color-main, primary);
+                color: $color-white;
+                width: 100%;
+
+                &:hover {
+                background-color: transparent;
+                color: map-get($color-main, primary);
+                }
+            }
+            
+        }
+    }
+}
+
+/* ===================== MOBILE ===================== */
+@media screen and (max-width: 768px) {
+
+    .services {
+
+        &__buttons {
+            display: flex;
+            justify-content: center;
+
+            .buttons__container {
+                width: 100%;
+            }
+
+        }
+
+        &__cards {
+            @include flex-column;
+            row-gap: 2rem;
+
+            .service-card {
+                width: 100%;
+            }
+        }
+
+    }
+
+}

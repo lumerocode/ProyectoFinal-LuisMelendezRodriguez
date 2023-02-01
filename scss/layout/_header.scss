@@ -1,0 +1,183 @@
+@import "../utilities/variables";
+
+.header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background-color: map-get($color-main, primary);
+    height: 6rem;
+    z-index: 10;
+
+    &__section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: $container-width-desktop;
+        margin: 0 auto;
+        width: 100%;
+
+        .toggle-menu {
+            display: none;
+        }
+
+        .logo-menu {
+            display: none;
+        }
+
+        div {
+            width: 5%;
+
+            a {
+                display: flex;
+
+                .header__logo {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .header__nav__items {
+            display: flex;
+
+            .header__nav__link {
+                padding: 16px 24px;
+
+                a {
+                    color: $color-black;
+
+                    &:hover {
+                        color: $color-white;
+                        border-bottom: 3px solid white;
+                    }
+                }
+
+                &--selected a {
+                    font-weight: bold;
+                    color: $color-white;
+                    border-bottom: 3px solid white;
+                }
+        
+            }
+            
+        }
+
+        .social {
+            display: flex;
+            column-gap: 1rem;
+
+            &__link {
+                height: 2rem;
+                width: 2rem;
+                background-color: $color-white;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                i {
+                    color: $color-secondary;
+                }
+
+                &:hover {
+                    background-color: $color-secondary;
+
+                    i {
+                        color: $color-white;
+                    }
+                }
+
+            }
+            
+        }
+    }
+}
+
+/* ===================== MOBILE ===================== */
+@media screen and (max-width: 768px) {
+    .header {
+        height: 5rem;
+
+        &__section {
+            max-width: 100%;
+            flex-direction: column;
+
+            .header__nav__items {
+                display: flex;
+    
+                .header__nav__link {
+                    padding: 16px 24px;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    a {
+                        color: $color-black;
+    
+                        &:hover {
+                            color: $color-white;
+                            border-bottom: none;
+                        }
+                    }
+    
+                    &--selected a {
+                        font-weight: bold;
+                        color: $color-white;
+                        border-bottom: none;
+                    }
+            
+                }
+                
+            }
+
+            .toggle-menu {
+                display: block;
+                position: absolute;
+                top: 1.5rem;
+                right: 2rem;
+                cursor: pointer;
+                z-index: 1;
+            }
+
+            .main-menu--show {
+                transition: transform 0.3s;
+                transform: translateY(100%);
+            }
+
+            .header__logo-content {
+                display: block;
+                width: 12%;
+                position: absolute;
+                top: 1rem;
+                left: 2rem;
+                cursor: pointer;
+                z-index: 1;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .header__nav {
+                width: 100%;
+                margin-top: 2rem;
+
+                &__items {
+                    text-align: center;
+                    background-color: map-get($color-main, primary);
+                    display: flex;
+                    flex-direction: column;
+                    transform: translateY(-100%);
+                }
+            }
+
+            .social {
+                display: none;
+            }
+
+        }
+
+    }
+}

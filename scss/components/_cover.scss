@@ -1,0 +1,79 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.cover {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    margin-top: 6rem;
+    height: calc(100vh - 6rem);
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1rem;
+        padding-right: 8rem;
+
+        &__desc {
+            text-align: left;
+        }
+
+        &__buttons {
+            display: flex;
+            column-gap: 3rem;
+
+            .button-secondary {
+        
+                i {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+
+        &__img {
+            width: 100%;
+            border-radius: 1.5rem;
+        }
+    }
+
+}
+
+/* ===================== MOBILE ===================== */
+@media screen and (max-width: 768px) {
+
+    .cover {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        margin-top: 8rem;
+        padding-bottom: 50px;
+
+        &__left {
+            margin-top: 1.5rem;
+            padding-right: 0;
+            text-align: center;
+
+            &__desc {
+                text-align: justify;
+            }
+
+            &__buttons {
+                @include flex-column;
+                row-gap: 1rem;
+    
+                .button-secondary {
+            
+                    i {
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+}

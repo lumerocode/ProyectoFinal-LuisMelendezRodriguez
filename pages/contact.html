@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Software, It, Development, Saas Business, Startup, App Landing, Agency, Contact, address"/>
+    <meta name="description" content="This is the About page where you can contact us."/>
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico">
+    <!-- Style external link -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fontawesome Link -->
+    <script src="https://kit.fontawesome.com/152ce6a8e1.js" crossorigin="anonymous"></script>
+    <title>Contact</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <section class="header__section">
+
+            <!-- Header Responsive -->
+            <div id="toggle-menu" class="toggle-menu">
+                <img src="../src/menu_toggle.png" alt="Toggle menu">
+            </div> 
+
+           <!-- Header Desktop -->
+            <div class="header__logo-content">
+                <a href="../index.html"><img class="header__logo" src="../src/mscomp-logo2.png" alt="Logo" width="100"></a>
+            </div>
+
+            <nav id="main-menu" class="header__nav">
+                <ul  class="header__nav__items">
+                    <li class="header__nav__link"> <a href="../index.html">Home</a> </li>
+                    <li class="header__nav__link"> <a href="./portfolio.html">Portfolio</a> </li>
+                    <li class="header__nav__link"> <a href="./store.html">Store</a> </li>
+                    <li class="header__nav__link"> <a href="./services.html">Services</a> </li>
+                    <li class="header__nav__link"> <a href="./about.html">About</a> </li>
+                    <li class="header__nav__link header__nav__link--selected"> <a href="#">Contact</a> </li>
+                </ul>
+            </nav>
+            <!-- I use the social class because I will also use it in the footer -->
+            <ul class="social">
+                <a href="https://www.facebook.com/" target="_blank"><label class="social__link"><i class="fa fa-facebook"></i></label></a>
+                <a href="https://www.linkedin.com/" target="_blank"><label class="social__link"><i class="fa fa-linkedin"></i></label></a>
+                <a href="https://www.instagram.com/" target="_blank"><label class="social__link"><i class="fa fa-instagram"></i></label></a>
+                <a href="https://www.twitter.com/" target="_blank"><label class="social__link"><i class="fa fa-twitter"></i></label></a>
+            </ul>
+        </section>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Cover -->
+        <section class="cover">
+            <div class="cover__left">
+                <h1 class="cover__left__title">We're here to help you in all you need</h1>
+                <p class="cover__left__desc">
+                    Applying the Industry 4.0 concept requires deep technical knowledge and the ability to collaborate across heterogeneous technology pillars, as well as significant business experience and the ability to define, collect and analyze data. Join the new industrial revolution by implementing the latest technological advances to your business, and discover the benefits that these bring.</p>
+            </div>
+            <div class="cover__right">
+                <img class="cover__right__img" src="../src/contact_cover.png" alt="Contact Image">
+            </div>
+        </section>
+
+        <!-- Our Contact Form -->
+        <section class="contact-form">
+            <h2 class="contact-form__title">Our Contact Form</h2>
+            <p class="contact-form__desc">Committed to providing you with the best quality and the best performance so that together we can achieve the website of your dreams.</p>
+            <div class="contact-form__form">
+                <form class="form">
+                    <div class="form__up">
+                        <input type="text" placeholder="Full Name*" required>
+                        <input type="email" placeholder="Email*" required>
+                    </div>
+                    <input class="form__medium" type="text" placeholder="Subject*" required>
+                    <textarea class="form__down" placeholder="Message" required></textarea>
+                    <button class="form__button button-primary" type="submit">SEND</button>
+                </form>
+                <div class="contact-form__right">
+                    <!-- I use the right-container class because I will also use it 3 times in this section -->
+                    <div class="right-container">
+                        <img class="right-container__img" src="../src/contact_address.png" alt="Adress Image">
+                        <div class="right-container__text">
+                            <h5>Adress</h5>
+                            <p> Av. Pacífico 370, Chimbote 02711</p>
+                        </div>
+                    </div>
+                    <div class="right-container container-separator">
+                        <img class="right-container__img" src="../src/contact_phone.png" alt="Phone Image">
+                        <div class="right-container__text">
+                            <h5>Phone</h5>
+                            <p>+51922563543</p>
+                        </div>
+                    </div>
+                    <div class="right-container">
+                        <img class="right-container__img" src="../src/contact_mail.png" alt="Email Image">
+                        <div class="right-container__text">
+                            <h5>Email</h5>
+                            <p>contactus@mscomp.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- We are located in  -->
+        <section class="map">
+            <h2 class="map__title">We are located in</h2>
+            <p class="map__desc">We can meet us in Av. Pacífico 370, Chimbote 02711.</p>
+            <div class="map__container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3939.3566938431827!2d-78.5332793!3d-9.1222189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ab84489647f7bd%3A0x6334f66cb8566da9!2sPlaza%20Mayor%20de%20Nuevo%20Chimbote%2C%20Nuevo%20Chimbote%2002711!5e0!3m2!1ses-419!2spe!4v1662152428217!5m2!1ses-419!2spe" width="1200" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp -->
+    <div class="whatsapp"> 
+        <div class="whatsapp__link">
+            <a href="https://wa.me/+51922438832?text=%C2%A1Hola+MSComp%21+Tengo+una+consulta" target="_blank"><img src="../src/whatsapp.png" alt="Whatsapp Logo"></a> 
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__up">
+            <div class="footer__first">
+                <img class="footer__first__logo" src="../src/mscomp-logo2.png" alt="Logo">
+                <p class="footer__first__desc">Enjoy creating your website with us</p>
+                <ul class="social">
+                    <a href="https://www.facebook.com/" target="_blank"><label class="social__link"><i class="fa fa-facebook"></i></label></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><label class="social__link"><i class="fa fa-linkedin"></i></label></a>
+                    <a href="https://www.instagram.com/" target="_blank"><label class="social__link"><i class="fa fa-instagram"></i></label></a>
+                    <a href="https://www.twitter.com/" target="_blank"><label class="social__link"><i class="fa fa-twitter"></i></label></a>
+                </ul>
+            </div>
+            <!-- I use the column class because I will also use it 3 times in the footer -->
+            <div class="column">
+                <h3 class="column__title">Company</h3>
+                <ul class="column__items">
+                    <li class="column__item"><a href="../pages/about.html">About</a></li>
+                    <li class="column__item"><a href="../pages/progress.html">Blog</a></li>
+                    <li class="column__item"><a href="../pages/portfolio.html">Portfolio</a></li>
+                    <li class="column__item"><a href="../pages/services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3 class="column__title">Help & Support</h3>
+                <ul class="column__items">
+                    <li class="column__item"><a href="#">Contact</a></li>
+                    <li class="column__item"><a href="../pages/progress.html">FAQ</a></li>
+                    <li class="column__item"><a href="../pages/progress.html">Testimonial</a></li>
+                    <li class="column__item"><a href="../pages/progress.html">Support Center</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3 class="column__title">Information</h3>
+                <ul class="column__items"> 
+                    <li class="column__item"><a href="../pages/progress.html">All Services</a></li>
+                    <li class="column__item"><a href="../pages/progress.html">Product Design</a></li>
+                    <li class="column__item"><a href="../pages/progress.html">Web Development</a></li>
+                    <li class="column__item"><a href="../pages/progress.html">Consulting & Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__down">
+            <div class="footer__down__container">
+                <p>Copyright@2022 <a href="../index.html" target="_blank">MS Comp</a>.All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../Js/menu.js"></script>
+</body>
+</html>

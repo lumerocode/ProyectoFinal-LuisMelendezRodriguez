@@ -1,0 +1,25 @@
+//Main colors
+$color-main: (
+    primary: #54BD95,
+    gradient: #85DAB9,
+);
+
+//Gap between Buttons 
+$grid-column-button: 1rem;
+
+//Gap between containers
+$grid-column-gap: $grid-column-button * 2;
+
+$color-secondary: #161C28;
+$color-text1: #A6A6A6;
+$color-border: #6a6a6a42;
+$color-white: #F9FAFB;
+$color-black:#000;
+$color-bg: #ecf0f3;
+$color-whatsapp: #25d366;
+
+$typography : 'Rubik', sans-serif;
+
+$container-width-desktop: 82%;
+$container-width-tablet: 84%;
+$container-width-mobile: 86%;

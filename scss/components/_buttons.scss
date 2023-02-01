@@ -1,0 +1,30 @@
+
+.button-primary {
+    background: map-get($color-main, primary);
+    color: $color-white;
+    padding: 16px 32px;
+    border-radius: 10px;
+    border: 2px solid map-get($color-main, primary);
+}
+
+ .button-primary:hover {
+     background: #F9FAFB;
+     color: map-get($color-main, primary);
+     border: 2px solid map-get($color-main, primary);
+     cursor: pointer;
+ }
+
+ .button-secondary {
+    background: #F9FAFB;
+    color: map-get($color-main, primary);
+    padding: 16px 32px;
+    border-radius: 10px;
+    border: 2px solid map-get($color-main, primary);
+}
+
+ .button-secondary:hover {
+     background-color: map-get($color-main, primary);
+     color: $color-white;
+     border: 2px solid map-get($color-main, primary);
+     cursor: pointer;
+ }

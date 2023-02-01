@@ -1,0 +1,64 @@
+@import "../utilities/variables";
+
+/* ===================== GENERAL SETTINGS ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto;
+    background-color: $color-bg;
+    font-family: $typography;
+    /* height: 100vh; */
+}
+
+main {
+    max-width: $container-width-desktop;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.6rem;
+    color: $color-secondary;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: $color-secondary;
+}
+
+h3 {
+    color: $color-secondary;
+}
+
+h4 {
+    color: $color-secondary;
+}
+
+p {
+    line-height: 1.3rem;
+    font-size: 1rem;
+}
+
+/* ===================== MOBILE ===================== */
+@media screen and (max-width: 768px) {
+    main {
+        max-width: $container-width-mobile;
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: $color-secondary;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+}

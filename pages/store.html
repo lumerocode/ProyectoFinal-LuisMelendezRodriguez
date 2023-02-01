@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Software, It, Development, Saas Business, Startup, App Landing, Agency, About, Team"/>
+    <meta name="description" content="This is the About page where you can see why did we decided being more than a family."/>
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico">
+    <!-- Style external link -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fontawesome Link -->
+    <script src="https://kit.fontawesome.com/152ce6a8e1.js" crossorigin="anonymous"></script>
+    <title>Store</title>
+</head>
+<body>
+      <!-- Header -->
+  <header class="header">
+    <section class="header__section">
+
+        <!-- Header Responsive -->
+        <div id="toggle-menu" class="toggle-menu">
+            <img src="../src/menu_toggle.png" alt="Toggle menu"></a>
+        </div>
+
+        <!-- Header Desktop -->
+        <div class="header__logo-content">
+            <a href="../index.html"><img class="header__logo" src="../src/mscomp-logo2.png" alt="Header Logo" width="100"></a>
+        </div>
+
+        <nav id="main-menu" class="header__nav">
+            <ul class="header__nav__items">
+                <li class="header__nav__link"> <a href="../index.html">Home</a> </li>
+                <li class="header__nav__link"> <a href="../pages/portfolio.html">Portfolio</a> </li>
+                <li class="header__nav__link header__nav__link--selected"> <a href="#">Store</a> </li>
+                <li class="header__nav__link"> <a href="../pages/services.html">Services</a> </li>
+                <li class="header__nav__link"> <a href="../pages/about.html">About</a> </li>
+                <li class="header__nav__link"> <a href="../pages/contact.html">Contact</a> </li>
+            </ul>
+        </nav>
+        <!-- I use the social class because I will also use it in the footer -->
+        <ul class="social">
+            <a href="https://www.facebook.com/" target="_blank"><label class="social__link"><i class="fa fa-facebook"></i></label></a>
+            <a href="https://www.linkedin.com/" target="_blank"><label class="social__link"><i class="fa fa-linkedin"></i></label></a>
+            <a href="https://www.instagram.com/" target="_blank"><label class="social__link"><i class="fa fa-instagram"></i></label></a>
+            <a href="https://www.twitter.com/" target="_blank"><label class="social__link"><i class="fa fa-twitter"></i></label></a>
+        </ul>
+    </section>
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <section class="container">
+      <h1 class="container__title">Productos</h1>
+      <div class="row" id="cards"></div>
+
+      <h2 class="">Carrito de compras</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="items" class="body"></tbody>
+        <tfoot>
+          <tr id="footer">
+            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total productos</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm button-primary" id="vaciar-carrito">
+                vaciar todo
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+    
+    <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>Teclado</td>
+        <td>1</td>
+        <td>
+            <button class="btn btn-info btn-sm btn-more">
+                +
+            </button>
+            <button class="btn btn-danger btn-sm btn-less">
+                -
+            </button>
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+    </template>
+
+    <template id="template-card">
+      <div class="cards">
+        <div class="card">
+          <img src="" alt="">
+          <div class="card-body">
+            <h5>Titulo</h5>
+            <div class="price">
+              <span>S/.</span><p>precio</p>
+            </div>
+            <button class="btn btn-dark button-primary">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+  </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__up">
+          <div class="footer__first">
+              <img class="footer__first__logo" src="../src/mscomp-logo2.png" loading="lazy" alt="Logo">
+              <p class="footer__first__desc">Enjoy creating your website with us</p>
+              <ul class="social">
+                  <a href="https://www.facebook.com/" target="_blank"><label class="social__link"><i class="fa fa-facebook"></i></label></a>
+                  <a href="https://www.linkedin.com/" target="_blank"><label class="social__link"><i class="fa fa-linkedin"></i></label></a>
+                  <a href="https://www.instagram.com/" target="_blank"><label class="social__link"><i class="fa fa-instagram"></i></label></a>
+                  <a href="https://www.twitter.com/" target="_blank"><label class="social__link"><i class="fa fa-twitter"></i></label></a>
+              </ul>
+          </div>
+          <!-- I use the column class because I will also use it 3 times in the footer -->
+          <div class="column">
+              <h3 class="column__title">Company</h3>
+              <ul class="column__items">
+                  <li class="column__item"><a href="../pages/about.html">About</a></li>
+                  <li class="column__item"><a href="../pages/progress.html">Blog</a></li>
+                  <li class="column__item"><a href="../pages/portfolio.html">Portfolio</a></li>
+                  <li class="column__item"><a href="../pages/services.html">Services</a></li>
+              </ul>
+          </div>
+          <div class="column">
+              <h3 class="column__title">Help & Support</h3>
+              <ul class="column__items">
+                  <li class="column__item"><a href="../pages/contact.html">Contact</a></li>
+                  <li class="column__item"><a href="../pages/progress.html">FAQ</a></li>
+                  <li class="column__item"><a href="../pages/progress.html">Testimonial</a></li>
+                  <li class="column__item"><a href="../pages/progress.html">Support Center</a></li>
+              </ul>
+          </div>
+          <div class="column">
+              <h3 class="column__title">Information</h3>
+              <ul class="column__items"> 
+                  <li class="column__item"><a href="../pages/progress.html">All Services</a></li>
+                  <li class="column__item"><a href="../pages/progress.html">Product Design</a></li>
+                  <li class="column__item"><a href="../pages/progress.html">Web Development</a></li>
+                  <li class="column__item"><a href="../pages/progress.html">Consulting & Support</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer__down">
+          <div class="footer__down__container">
+              <p>Copyright@2022 <a href="../index.html" target="_blank">MS Comp</a>.All rights reserved</p>
+          </div>
+      </div>
+    </footer>
+    <script src="../Js/menu.js"></script>
+    <script src="../Js/javascript.js"></script>
+</body>
+</html>

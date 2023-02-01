@@ -1,84 +1,382 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
-    <link rel="icon" href="./favicon.ico">
-    <!-- Fontawesome Link -->
-    <script src="https://kit.fontawesome.com/152ce6a8e1.js" crossorigin="anonymous"></script>
-    <!-- Boostratp -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>CART SIMULATION</title>
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Software, It, Development, Saas Business, Startup, App Landing, Agency, Blog, Testimonial "/>
+  <meta name="description" content="This is the homepage where you can see the main content."/>
+  <!-- Favicon -->
+  <link rel="icon" href="./favicon.ico">
+  <!-- Style external link -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Fontawesome Link -->
+  <script src="https://kit.fontawesome.com/152ce6a8e1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <title>Home</title>
 </head>
 <body>
-    <div class="container">
-      <h4>Productos</h4>
-      <div class="row" id="cards"></div>
 
-      <h4 class="mt-5">Carrito de compras</h4>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Item</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Acción</th>
-            <th scope="col">Total</th>
-          </tr>
-        </thead>
-        <tbody id="items"></tbody>
-        <tfoot>
-          <tr id="footer">
-            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
+    <!-- Header -->
+    <header class="header">
+      <section class="header__section">
 
-    <template id="template-footer">
-        <th scope="row" colspan="2">Total productos</th>
-        <td>10</td>
-        <td>
-            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
-                vaciar todo
-            </button>
-        </td>
-        <td class="font-weight-bold">$ <span>5000</span></td>
-    </template>
-    
-    <template id="template-carrito">
-      <tr>
-        <th scope="row">id</th>
-        <td>Teclado</td>
-        <td>1</td>
-        <td>
-            <button class="btn btn-info btn-sm">
-                +
-            </button>
-            <button class="btn btn-danger btn-sm">
-                -
-            </button>
-        </td>
-        <td>$ <span>500</span></td>
-      </tr>
-    </template>
-
-    <template id="template-card">
-      <div class="col-12 mb-2 col-md-4">
-        <div class="card">
-          <img src="" alt="" class="card-img-top">
-          <div class="card-body">
-            <h5>Titulo</h5>
-            <p>precio</p>
-            <button class="btn btn-dark">Comprar</button>
+          <!-- Header Responsive -->
+          <div id="toggle-menu" class="toggle-menu">
+              <img src="./src/menu_toggle.png" alt="Toggle menu"></a>
           </div>
-        </div>
-      </div>
-    </template>
 
-    <script src="Js/javascript.js"></script>
+          <!-- <div class="logo-menu">
+              <a href="#"><img src="./src/mscomp-logo2.png" alt="Logo menu">
+          </div> -->
+
+          <!-- Header Desktop -->
+          <div class="header__logo-content">
+              <a href="#"><img class="header__logo" src="./src/mscomp-logo2.png" alt="Header Logo" width="100"></a>
+          </div>
+
+          <nav id="main-menu" class="header__nav">
+              <ul class="header__nav__items">
+                  <li class="header__nav__link header__nav__link--selected"> <a href="#">Home</a> </li>
+                  <li class="header__nav__link"> <a href="./pages/portfolio.html">Portfolio</a> </li>
+                  <li class="header__nav__link"> <a href="./pages/store.html">Store</a> </li>
+                  <li class="header__nav__link"> <a href="./pages/services.html">Services</a> </li>
+                  <li class="header__nav__link"> <a href="./pages/about.html">About</a> </li>
+                  <li class="header__nav__link"> <a href="./pages/contact.html">Contact</a> </li>
+              </ul>
+          </nav>
+          <!-- I use the social class because I will also use it in the footer -->
+          <ul class="social">
+              <a href="https://www.facebook.com/" target="_blank"><label class="social__link"><i class="fa fa-facebook"></i></label></a>
+              <a href="https://www.linkedin.com/" target="_blank"><label class="social__link"><i class="fa fa-linkedin"></i></label></a>
+              <a href="https://www.instagram.com/" target="_blank"><label class="social__link"><i class="fa fa-instagram"></i></label></a>
+              <a href="https://www.twitter.com/" target="_blank"><label class="social__link"><i class="fa fa-twitter"></i></label></a>
+          </ul>
+      </section>
+  </header>
+
+  <!-- Main -->
+  <main>
+      <!-- Cover -->
+      <section class="cover">
+          <div class="cover__left">
+              <h1 class="cover__left__title">We're here to push your product to next level</h1>
+              <p class="cover__left__desc">We have been developing technology for StartUps for more than 2 years, we have won numerous awards in Peru and the World and that is how with all the experience gained we decided to found MSComp.</p>
+              <div class="cover__left__buttons">
+                  <a class="button-primary" target="_blank" href="./pages/services.html">Get started</a>
+                  <a class="button-secondary" target="_blank" href="https://www.youtube.com/"><i class="fa fa-play"></i>View Demo</a>
+              </div>
+          </div>
+          <div class="cover__right">
+              <img class="cover__right__img" src="./src/home_cover.png" alt="Home Image">
+          </div>
+      </section>
+      
+      <!-- Clients -->
+      <section class="clients">
+          <p class="clients__text animate__animated animate__fadeIns">More than 20 world renowned companies have used MSComp</p>
+          <div class="clients__container">
+              <a href="./pages/progress.html" class="client_img"><img loading="lazy" src="./src/unplash-logo.png" alt="Unplash Logo"></a>
+              <a href="./pages/progress.html" class="client_img"><img loading="lazy" src="./src/notion-logo.png" alt="Notion Logo"></a>
+              <a href="./pages/progress.html" class="client_img"><img loading="lazy" src="./src/intercom-logo.png" alt="Intercom Logo"></a>
+              <a href="./pages/progress.html" class="client_img"><img loading="lazy" src="./src/descript-logo.png" alt="Descript Logo"></a>
+              <a href="./pages/progress.html" class="client_img"><img loading="lazy" src="./src/grammarly-logo.png" alt="Grammarly Logo"></a>
+          </div>
+      </section>
+
+      <!-- Crafted for -->
+      <section class="craf">
+          <div class="craf__left">
+              <img src="./src/home_craf.png" loading="lazy" alt="Image about crafted for">
+          </div>
+          <div class="craf__right">
+              <h2 class="craf__right__title">Crafted for</h2>
+              <p class="craf__right__desc">
+                  This space is created for people who want to take their business to the next level, show the digital world that it will be present so that everyone can see them through a website.</p>
+              <div class="craf__right__container">
+                  <!-- I use the craf-list class because I will also use it 4 times in this section -->
+                  <div class="craf-list">
+                      <img class="craf-list__img" src="./src/thunder.png" loading="lazy" alt="Image about Startup">
+                      <div class="craf-list__text">
+                          <h4>Startup</h4>
+                          <p>For small businesses that want to be in the digital world.</p>
+                      </div>
+                  </div>
+                  <div class="craf-list">
+                      <img class="craf-list__img" src="./src/sass.png" loading="lazy" alt="Image about Sass Business">
+                      <div class="craf-list__text">
+                          <h4>Saas Business</h4>
+                          <p>For Saas Business who want to sell their services for internet.</p>
+                      </div>
+                  </div>
+                  <div class="craf-list">
+                      <img class="craf-list__img" src="./src/agency.png" loading="lazy" alt="Image about Agency">
+                      <div class="craf-list__text">
+                          <h4>Agency</h4>
+                          <p>For agencies that want to publish their services and have a blog.</p>
+                      </div>
+                  </div>
+                  <div class="craf-list">
+                      <img class="craf-list__img" src="./src/app.png" loading="lazy" alt="Image about App Landing">
+                      <div class="craf-list__text">
+                          <h4>App Landing</h4>
+                          <p>For companies that only want a landing page to start offering their services.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Plans -->
+      <section class="plans">
+          <h2 class="plans__title">Choose a Plan that's right for you</h2>
+          <p class="plans__desc">Choose a plan that works best for you, feel free to contact us.</p>
+          <div class="plans__buttons">
+              <div class="buttons__container">
+                  <!-- I use the button-primary class and button-secondary class because I will also use it in Home and Services -->
+                  <button class="button-secondary">Bil Monthly</button>
+                  <button class="button-primary">Bil Yearly</button>
+              </div>
+          </div>
+          <div class="plans__cards">
+              <!-- I use the plan-card class because I will also use it 3 times in this section -->
+              <div class="plan-card">
+                  <h4 class="plan-card__title">Basic</h4>
+                  <p class="plan-card__desc">Have a go and test your superpowers with this plan.</p>
+                  <div class="plan-card__price">
+                      <span>$</span><p>99</p>
+                  </div>
+                  <p class="plan-card__save"><em>Save $30 a year</em></p>
+                  <a href="./pages/services.html#services" target="_blank"><button class="button-primary">More info</button></a>
+              </div>
+              <div class="plan-card">
+                  <h4 class="plan-card__title">Pro</h4>
+                  <p class="plan-card__desc">Experiment the power of infinite possibilities.</p>
+                  <div class="plan-card__price">
+                      <span>$</span><p>199</p>
+                  </div>
+                  <p class="plan-card__save"><em>Save $50 a year</em></p>
+                  <a href="./pages/services.html#services" target="_blank"><button class="button-primary">More info</button></a>
+              </div>
+              <div class="plan-card">
+                  <h4 class="plan-card__title">Enterprise</h4>
+                  <p class="plan-card__desc">Unveil new superpowers and join the Design Leaque.</p>
+                  <div class="plan-card__price">
+                      <span>$</span><p>299</p>
+                  </div>
+                  <p class="plan-card__save"><em>Save $70 a year</em></p>
+                  <a href="./pages/services.html#services" target="_blank"><button class="button-primary">More info</button></a>
+              </div>
+          </div>
+      </section>
+
+      <!-- Benefits -->
+      <section class="benefit">
+          <div class="benefit__left">
+              <h2 class="benefit__title">What benefit will you get with us?</h2>
+              <ul class="benefit-items">
+                  <li class="benefit-item"><i class="fa fa-check"></i>Improve brand image.</li>
+                  <li class="benefit-item"><i class="fa fa-check"></i>It will give you a brand position and recognition both locally and nationally.</li>
+                  <li class="benefit-item"><i class="fa fa-check"></i>Loyalty to your customers.</li>
+                  <li class="benefit-item"><i class="fa fa-check"></i>If you're visible on the internet you can make your sales increase.</li>
+                  <li class="benefit-item"><i class="fa fa-check"></i>It has lower costs than any other advertising medium.</li>
+              </ul>
+          </div>
+          <div class="benefit__right">
+              <img src="./src/home_benefit.png" loading="lazy" alt="Image about benefit">
+          </div>
+      </section>
+
+      <!-- Blog -->
+      <section class="blog">
+          <h2 class="blog__title">Our Latest Blog Posts</h2>
+          <p class="blog__desc">See our recent publications and learn a little more about our work.</p>
+          <div class="blog__cards">
+              <div class="blog-cards__items">
+                  <!-- I use the blog-card class because I will also use it 2 times in this section -->
+                  <div class="blog-card">
+                      <img class="blog-card__img" src="./src/blog_image1.png" loading="lazy" alt="Image about the latest post">
+                      <div class="blog-card__date">
+                          <p>20-10-22</p>
+                          <p>news</p>
+                      </div>
+                      <h4 class="blog-card__title">5 Tips to improve the productivity of your company</h4>
+                      <p class="blog-card__desc">Boosting the productivity of your company corresponds to a primary factor to achieve the business goals that you have set for yourself.</p>
+                  </div>
+                  <div class="blog-card">
+                      <img class="blog-card__img" src="./src/blog_image2.png" loading="lazy" alt="Image about the latest post">
+                      <div class="blog-card__date">
+                          <p>13-10-22</p>
+                          <p>technology</p>
+                      </div>
+                      <h4 class="blog-card__title">Work methodologies for Startups and small businesses: Kanban</h4>
+                      <p class="blog-card__desc">The Kanban method is an efficient production system. It is part of an agile methodology that aims to manage the completion of tasks.</p>
+                  </div>
+              </div>
+              <div class="blog__targets">
+                      <!-- I use the blog__target class because I will also use it 4 times in this section -->
+                      <div class="blog__target">
+                          <img class="blog-target__img" src="./src/blog_image3.png" loading="lazy" alt="Image about the latest post">
+                          <div class="blog-target__content">
+                              <div class="blog-target__date">
+                                  <p>06-10-22</p>
+                                  <p>news</p>
+                              </div>
+                              <h5 class="blog-taget__content__title">10 Famous Websites You Didn't Know Used Django</h5>
+                          </div>
+                      </div>
+                      <div class="blog__target">
+                          <img class="blog-target__img" src="./src/blog_image4.png" loading="lazy" alt="Image about the latest post">
+                          <div class="blog-target__content">
+                              <div class="blog-target__date">
+                                  <p>30-09-22</p>
+                                  <p>Design</p>
+                              </div>
+                              <h5 class="blog-taget__content__title">Good Practices in the Design of a web API</h5>
+                          </div>
+                      </div>
+                      <div class="blog__target">
+                          <img class="blog-target__img" src="./src/blog_image5.png" loading="lazy" alt="Image about the latest post">
+                          <div class="blog-target__content">
+                              <div class="blog-target__date">
+                                  <p>23-09-22</p>
+                                  <p>news</p>
+                              </div>
+                              <h5 class="blog-taget__content__title">Ten Startups consolidated in Peru and with growth potential</h5>
+                          </div>
+                      </div>
+                      <div class="blog__target">
+                          <img class="blog-target__img" src="./src/blog_image6.png" loading="lazy" alt="Image about the latest post">
+                          <div class="blog-target__content">
+                              <div class="blog-target__date">
+                                  <p>16-09-22</p>
+                                  <p>technology</p>
+                              </div>
+                              <h5 class="blog-taget__content__title">Work methodologies for Startups: Agile</h5>
+                          </div>
+                      </div>                 
+              </div>
+              
+          </div>
+          <div class="blog__button">
+              <a href="./pages/progress.html"><button class="button-primary">See All Blog Posts</button></a>
+          </div>
+      </section>
+
+      <!-- Stay Tunned -->
+      <section class="tunned">
+          <div class="tunned__left">
+              <img class="tunned__img" src="./src/home__contactus.png" loading="lazy" alt="Image about tunned">
+          </div>
+          <div class="tunned__right">
+              <h2 class="tunned__title">Curious to learn more? Stay tuned</h2>
+              <p class="tunned__desc">You let us know whenever you want us to update anything or think something can be optimized.</p>
+                  <form class="tunned__send">
+                      <div class="tunned-send__left">
+                          <label class=""><i class="fa fa-envelope fa-2x"></i></label>
+                          <input type="email" placeholder="mscomp@gmail.com" required>
+                      </div>
+                      <div class="tunned-send__right">
+                          <button class="button-primary">Send</button>
+                      </div>
+                  </form>
+          </div>
+      </section>
+
+      <!-- Testimonial -->
+      <section class="test">
+          <h2 class="test__title">Testimonial</h2>
+          <p class="test__desc">What better way to endorse our work, that our clients talk about their experience.</p>
+          <div class="test__cards">
+              <!-- I use the test-card class because I will also use it 3 times in this section -->
+              <div class="test-card">
+                  <img class="test-card__img" src="./src/home_test1.png" loading="lazy" alt="Image about the person who made the comment">
+                  <p class="test-card__comment">Quick responses, extras that are already in the package, excellent work and professionalism. What I liked the most was that they were able to quickly adapt to changes. Lots of initiative!</p>
+                  <h4 class="test-card__name">José Miguel R.</h4>
+                  <p class="test-card__position">CEO Soldametal</p>
+              </div>
+
+              <div class="test-card">
+                  <img class="test-card__img" src="./src/home_test2.png" loading="lazy" alt="Image about the person who made the comment">
+                  <p class="test-card__comment">They have helped us translate our vision of the company into a platform, it really was what we were looking for a long time ago and with MSComp we were able to achieve it.</p>
+                  <h4 class="test-card__name">Marco Polo S.</h4>
+                  <p class="test-card__position">CEO Pakku</p>
+              </div>
+
+              <div class="test-card">
+                  <img class="test-card__img" src="./src/home_test3.png" loading="lazy" alt="Image about the person who made the comment">
+                  <p class="test-card__comment">
+                      A long time ago we wanted to implement a platform where we can publish educational and quality content for all our followers, thanks for making it happen MsComp.</p>
+                  <h4 class="test-card__name">Ana Beatriz M.</h4>
+                  <p class="test-card__position">CEO Boxiboom</p>
+              </div>
+          </div>
+
+      </section>
+  </main>
+
+  <!-- WhatsApp -->
+  <div class="whatsapp"> 
+      <div class="whatsapp__link">
+          <a href="https://wa.me/+51922438832?text=%C2%A1Hola+MSComp%21+Tengo+una+consulta" target="_blank"><img src="./src/whatsapp.png" alt="Whatsapp Logo"></a>
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <div class="footer__up">
+          <div class="footer__first">
+              <div class="footer__logo-content">
+                  <a href="#"><img class="footer__first__logo" src="./src/mscomp-logo2.png" loading="lazy" alt="Logo" width="100"></a>
+              </div>
+              <p class="footer__first__desc">Enjoy creating your website with us.</p>
+              <ul class="social">
+                  <a href="https://www.facebook.com/" target="_blank"><label class="social__link"><i class="fa fa-facebook"></i></label></a>
+                  <a href="https://www.linkedin.com/" target="_blank"><label class="social__link"><i class="fa fa-linkedin"></i></label></a>
+                  <a href="https://www.instagram.com/" target="_blank"><label class="social__link"><i class="fa fa-instagram"></i></label></a>
+                  <a href="https://www.twitter.com/" target="_blank"><label class="social__link"><i class="fa fa-twitter"></i></label></a>
+              </ul>
+          </div>
+          <!-- I use the column class because I will also use it 3 times in the footer -->
+          <div class="column">
+              <h3 class="column__title">Company</h3>
+              <ul class="column__items">
+                  <li class="column__item"><a href="./pages/about.html">About</a></li>
+                  <li class="column__item"><a href="./pages/progress.html">Blog</a></li>
+                  <li class="column__item"><a href="./pages/portfolio.html">Portfolio</a></li>
+                  <li class="column__item"><a href="./pages/services.html">Services</a></li>
+              </ul>
+          </div>
+          <div class="column">
+              <h3 class="column__title">Help & Support</h3>
+              <ul class="column__items">
+                  <li class="column__item"><a href="./pages/contact.html">Contact</a></li>
+                  <li class="column__item"><a href="./pages/progress.html">FAQ</a></li>
+                  <li class="column__item"><a href="./pages/progress.html">Testimonial</a></li>
+                  <li class="column__item"><a href="./pages/progress.html">Support Center</a></li>
+              </ul>
+          </div>
+          <div class="column">
+              <h3 class="column__title">Information</h3>
+              <ul class="column__items"> 
+                  <li class="column__item"><a href="./pages/progress.html">All Services</a></li>
+                  <li class="column__item"><a href="./pages/progress.html">Product Design</a></li>
+                  <li class="column__item"><a href="./pages/progress.html">Web Development</a></li>
+                  <li class="column__item"><a href="./pages/progress.html">Consulting & Support</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer__down">
+          <div class="footer__down__container">
+              <p>Copyright@2022 <a href="#">MS Comp</a>.All rights reserved</p>
+          </div>
+      </div>
+  </footer>
+  <script src="./Js/menu.js"></script>
+    
   </body>
 </html>
