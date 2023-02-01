@@ -8,7 +8,6 @@ const fragment = document.createDocumentFragment()
 let carrito = {}
 
 // Events
-// El evento DOMContentLoaded es disparado cuando el documento HTML ha sido completamente cargado y parseado
 document.addEventListener('DOMContentLoaded', e => { 
     fetchData() 
     if (localStorage.getItem('carrito')) {
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', e => {
 cards.addEventListener('click', e => { addCarrito(e) });
 items.addEventListener('click', e => { btnAumentarDisminuir(e) })
 
-// Traer productos
+// get products
 const fetchData = async () => {
     const res = await fetch('http://127.0.0.1:5500/Json/api.json');
     const data = await res.json()
@@ -27,7 +26,7 @@ const fetchData = async () => {
     pintarCards(data)
 }
 
-// Pintar productos
+// Show cart
 const pintarCards = data => {
     data.forEach(item => {
         templateCard.querySelector('h5').textContent = item.title
@@ -40,7 +39,7 @@ const pintarCards = data => {
     cards.appendChild(fragment)
 }
 
-// Agregar al carrito
+// Add cart
 const addCarrito = e => {
     if (e.target.classList.contains('btn-dark')) {
         // console.log(e.target.dataset.id)
@@ -100,7 +99,7 @@ const pintarFooter = () => {
         return
     }
     
-    // sumar cantidad y sumar totales
+    // pluss all
     const nCantidad = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)
     const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio ,0)
     // console.log(nPrecio)
